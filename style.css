@@ -1,1 +1,23 @@
+:root {
+    --cor-fundo;rgb(0,0,0);
+    --cor-principal;
+    --cor-secundaria;
+    --cor-destaque;
+    --cor-texto;
+}
 
+body{
+    background-color: var(--cor-fundo);
+    color: var(--cor-texo);
+    display: flex;
+    justfy-content:center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+    .caixa-principa{
+    background-color: var(--cor-principal);
+    widht: 90%
+    text-align: center;
+    padding: 20px;
+    }
