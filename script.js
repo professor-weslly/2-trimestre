@@ -6,19 +6,19 @@ cont caixapirncipal = document.querySelector(".caixa-resultado");
 
 const perguntas = [
     {
-        enunciado: "pergunta 1",
+        enunciado: "uma aluna nova entra em hogwarts, assim que voce entra na escola , o chapeu seletor te selecionia para uma casa",
         alternativas;[
-           texto: "sim"
+           texto: "lufa-lufa"
            afirmação:"afirmação",
         }
         
     }
-    texto:"nao",
+    texto:"sonserina",
     afirmação:"afirmação",
 }
 ]
-            texto: "alternativa 1"
-            texto:"alternativa 2",
+            texto: "lufa-lufa"
+            texto:"sonserina",
         ]
 }
     {
@@ -69,3 +69,43 @@ function mostraAlternativas(){
 }
 
 mostraPerguntas ();
+},
+];
+
+let atual = 0;
+let perguntaAtual;
+let historiaFinal = ""; 
+
+function mostraPergunta() {
+ /*    if(atual >= perguntas.length){
+        mostraResultado();
+        return;
+    }   */ 
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+ /* caixaAlternativas.textContent = ""; */
+    mostraAlternativas();
+}
+function mostraAlternativas() {
+    for(const alternativa of perguntaAtual.alternativas) {
+        const botaoAlternativas = document.createElement("button");
+        botaoAlternativas.textContent = alternativa.texto;
+        botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
+        caixaAlternativas.appendChild(botaoAlternativas);
+    }
+}
+
+function respostaSelecionada(opcaoSelecionada){
+            const afirmacoes = opcaoSelecionada.afirmacoes; /* mudar para opcaoSelecionada.afirmacao*/
+            historiaFinal = afirmacao; /* += afirmacao + " "; */
+            atual++;
+            mostraPergunta();
+      }
+/*
+function mostraResultado(){
+    caixaPerguntas.textContent = "Em 2049..."
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent ="";
+}
+*/
+mostraPergunta();
