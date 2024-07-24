@@ -22,30 +22,30 @@ const perguntas = [
         ]
 }
     {
-        enunciado: "pergunta 2",
+        enunciado: "voce se junta a mesa da sua casa selecionada, assim que voce se senta na mesa uma garota começa a conversar com voce , voce fala com ela?",
         alternativas;[
-            texto: "alternativa 1"
-            texto: "alternativa 2"
+            texto: "sim"
+            texto: "nao"
 ]
 }
-    {        enunciado: "pergunta 3",
+    {        enunciado: "garota:ola, voce é nova aqui , podemos ser amigas?",
             alternativos;[
-                texto: "alternativa 1",
-                texto: "alternativa 2",
+                texto: "claro",
+                texto: "nao, obrigada(o)",
             ]
 }
     {
-        enunciado: "pergunta 4"
+        enunciado: "voce continua conversando com a garota, apos isso o jantar acaba e voce vai ate sua comunal, draco se aproxima, voce fala com ele?"
         alternativas;[
-            texto: "alternativa 1"
-            texto: "alternativa 2"
+            texto: "sim"
+            texto: "nao"
         ]
  }
     {
-        enunciado: "pergunta 5"
+        enunciado: "mesmo assim ele fala com voce.-draco:oque temos aqui? uma aluna(o) nova(o)?vejo que nosso ano sera divertido , espero que voce nao se junte a pessoa errada ,-ele estica a mao esperando que voce aperte,"
         alternativas;[
-            texto: "alternativa 1"
-            texto: "alternativa 2"
+            texto: "apertar a mao"
+            texto: "nao apertar e ir embora"
 
         ]
 }
