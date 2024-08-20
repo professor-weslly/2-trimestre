@@ -1,75 +1,75 @@
-cont caixapirncipal = document.querySelector(".caixa-principal");
-cont caixapirncipal = document.querySelector(".caixa-perguntas");
-cont caixapirncipal = document.querySelector(".caixa-alternativas");
-cont caixapirncipal = document.querySelector(".caixa-resultado");
-cont caixapirncipal = document.querySelector(".caixa-resultado");
+const caixapirncipal = document.querySelector(".caixa-principal");
+const caixapirncipal = document.querySelector(".caixa-perguntas");
+const caixapirncipal = document.querySelector(".caixa-alternativas");
+const caixapirncipal = document.querySelector(".caixa-resultado");
+const caixapirncipal = document.querySelector(".caixa-resultado");
 
 const perguntas = [
     {
         enunciado: "uma aluna nova entra em hogwarts, assim que voce entra na escola , o chapeu seletor te selecionia para uma casa",
-        alternativas;[
-           texto: "lufa-lufa"
-           afirmação:"afirmação",
-        }
-        
-    }
-    texto:"sonserina",
-    afirmação:"afirmação",
-}
-]
-            texto: "lufa-lufa"
-            texto:"sonserina",
+        alternativas: [
+            {
+                texto: "lufa-lufa",
+                afirmação: "afirmação",
+            },
+            {
+                texto: "sonserina",
+                afirmação: "afirmação",
+            }
         ]
-}
+    },
     {
         enunciado: "voce se junta a mesa da sua casa selecionada, assim que voce se senta na mesa uma garota começa a conversar com voce , voce fala com ela?",
-        alternativas;[
-            texto: "sim"
-            texto: "nao"
-]
-}
-    {        enunciado: "garota:ola, voce é nova aqui , podemos ser amigas?",
-            alternativos;[
-                texto: "claro",
-                texto: "nao, obrigada(o)",
-            ]
-}
-    {
-        enunciado: "voce continua conversando com a garota, apos isso o jantar acaba e voce vai ate sua comunal, draco se aproxima, voce fala com ele?"
-        alternativas;[
-            texto: "sim"
-            texto: "nao"
+        alternativas: [
+            {
+                texto: "sim",
+                afirmação: "afirmação",
+            },
+            {
+                texto: "não",
+                afirmação: "afirmação",
+            }
         ]
- }
+    },
     {
-        enunciado: "mesmo assim ele fala com voce.-draco:oque temos aqui? uma aluna(o) nova(o)?vejo que nosso ano sera divertido , espero que voce nao se junte a pessoa errada ,-ele estica a mao esperando que voce aperte,"
-        alternativas;[
-            texto: "apertar a mao"
-            texto: "nao apertar e ir embora"
-
+    enunciado: "garota:ola, voce é nova aqui , podemos ser amigas?",
+    alternativas: [
+        {
+            texto: "claro",
+            afirmação: "afirmação",
+        },
+        {
+            texto: "não, obrigada(o)",
+            afirmação: "afirmação",
+        }
+    ]
+    },
+    {
+        enunciado: "voce continua conversando com a garota, apos isso o jantar acaba e voce vai ate sua comunal, draco se aproxima, voce fala com ele?",
+        alternativas: [
+            {
+                texto: "sim",
+                afirmação: "afirmação",
+            },
+            {
+                texto: "não",
+                afirmação: "afirmação",
+            }
         ]
-}
-]
-
-let atual = 0;
-let perguntaAtual;
-
-function mostrapergunta(){
-    perguntaAtual = perguntas[atual];
-    caixaPerguntas. textContent= perguntaAtual.enunciado;
-    mostraAlternativa();
-}
-
-function mostraAlternativas(){
-    for(const alternativa of perguntaAtual.alternativas){
-    const botaoAlternativas = document.createElement("button");
-    botãoAlternatiivas.textContent = alternativa;
-    caixaAlternativa.appendchild(botãoAlternativas);
-    }
-}
-
-mostraPerguntas ();
-},
+        },
+       {
+        enunciado: "mesmo assim ele fala com voce.-draco:oque temos aqui? uma aluna(o) nova(o)?vejo que nosso ano sera divertido , espero que voce nao se junte a pessoa errada ,-ele estica a mao esperando que voce aperte",
+        alternativas: [
+            {
+                texto: "sim",
+                afirmação: "afirmação",
+            },
+            {
+                texto: "não",
+                afirmação: "afirmação",
+            }
+        ]
+        },
 ];
 
 let atual = 0;
@@ -77,15 +77,16 @@ let perguntaAtual;
 let historiaFinal = ""; 
 
 function mostraPergunta() {
- /*    if(atual >= perguntas.length){
+     if(atual >= perguntas.length){
         mostraResultado();
         return;
-    }   */ 
+    }    
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
- /* caixaAlternativas.textContent = ""; */
+    caixaAlternativas.textContent = "";
     mostraAlternativas();
 }
+
 function mostraAlternativas() {
     for(const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
@@ -96,16 +97,16 @@ function mostraAlternativas() {
 }
 
 function respostaSelecionada(opcaoSelecionada){
-            const afirmacoes = opcaoSelecionada.afirmacoes; /* mudar para opcaoSelecionada.afirmacao*/
-            historiaFinal = afirmacao; /* += afirmacao + " "; */
+            const afirmacoes = opcaoSelecionada.afirmação; 
+            historiaFinal += afirmacoes + " "; 
             atual++;
             mostraPergunta();
       }
-/*
+
 function mostraResultado(){
     caixaPerguntas.textContent = "Em 2049..."
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent ="";
 }
-*/
+
 mostraPergunta();

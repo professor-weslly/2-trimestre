@@ -1,41 +1,41 @@
 :root {
-    --cor-fundo;rgb(0,0,0);
-    --cor-principal;
-    --cor-secundaria;
-    --cor-destaque;
-    --cor-texto;
+    --cor-fundo:rgb(1, 8, 14);
+    --cor-principal: rgb(11, 13, 32);
+    --cor-secundaria: rgb(33, 35, 51) ; 
+    --cor-destaque:rgb(43, 222, 253); 
+    --cor-texto:rgb(0, 0, 0);
 }
 
 body{
     background-color: var(--cor-fundo);
     color: var(--cor-texo);
     display: flex;
-    justfy-content:center;
+    justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-    .caixa-principa{
+.caixa-principa {
     background-color: var(--cor-principal);
-    widht: 90%
+    width: 90%;
     text-align: center;
     padding: 20px;
-    }
+}
 
-    h1{
-    color: VAR(--cor-destaque);
-    }
+h1 {
+color: var(--cor-destaque);
+}
 
-    button{
-        background-color: var(--cor-secundaria);
-        color: var(--cor-texto);
-        border:nome;
-        border-radius: 15px;
-        padding: 15px;
-        transition: background-color 0.3s;
-    }
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    transition: background-color 0.3s;
+}
 
-    button:hoven{
-        background-color: var(--cor-destaque);
-        color: var(--cor-principal);
-    }
+button:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
+}
